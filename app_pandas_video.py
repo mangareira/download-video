@@ -9,7 +9,7 @@ def download_video(m3u8_url, output_file, referer):
         f"(KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36\r\n"
         f"Referer: {referer}\r\n"
     )
-    command = ['ffmpeg', '-headers', headers, '-i', m3u8_url, '-c', 'copy', output_file]
+    command = ['ffmpeg', '-headers', headers, '-i', m3u8_url, '-c', 'copy', output_file + ".mp4"]
     subprocess.run(command)
 
 def download_button_click():
